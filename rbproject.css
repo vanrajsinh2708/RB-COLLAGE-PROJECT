@@ -1,16 +1,125 @@
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+/* Color Theme:
+   Navy Blue  - #14213D
+   Gold       - #C49A45
+   White      - #FFFFFF
+   Light Gray - #F8F9FB
+   Dark Gray  - #444444
+   Text Black - #222222
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.row1 {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  background-color: black;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fb;
+    color: #222;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6%;
+    min-height: 72px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logo-image {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    max-height: 48px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    margin: 0 14px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c49a45;
+}
+
+button {
+    padding: 11px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login {
+    background-color: white;
+    color: #14213d;
+    border: 1px solid #14213d;
+}
+
+.register {
+    background-color: #14213d;
+    color: white;
+    border: 1px solid #14213d;
+    margin-left: 8px;
+}
+
+.login:hover {
+    background-color: #f0f2f5;
+}
+
+.register:hover {
+    background-color: #c49a45;
+    border-color: #c49a45;
+    color: #14213d;
+}
+
+footer {
+    background-color: #14213d;
+    color: #ddd;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .nav-actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    .register {
+        margin-left: 0;
+    }
 }
