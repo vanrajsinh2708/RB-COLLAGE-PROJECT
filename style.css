@@ -102,6 +102,21 @@ main {
     flex: 1;
 }
 
+.page-content {
+    padding: 120px 5% 40px;
+    color: #222222;
+}
+
+.page-content h1 {
+    margin-bottom: 20px;
+    color: #14213D;
+}
+
+.page-content p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 footer {
     background-color: #14213d;
     color: #ddd;
