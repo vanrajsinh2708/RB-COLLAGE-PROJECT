@@ -17,6 +17,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fb;
     color: #222;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header.navbar {
@@ -94,13 +98,18 @@ button {
     color: #14213d;
 }
 
+main {
+    flex: 1;
+}
+
 footer {
     background-color: #14213d;
     color: #ddd;
     text-align: center;
     padding: 25px 15px;
-    margin-top: 40px;
+    margin-top: auto;
     font-size: 14px;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
