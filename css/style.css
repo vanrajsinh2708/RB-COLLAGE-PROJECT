@@ -1,12 +1,16 @@
-/* Color Theme:
+
+/* =====================================
+   WATCHX WEBSITE - COMMON CSS
+   Color Theme:
    Navy Blue  - #14213D
    Gold       - #C49A45
    White      - #FFFFFF
    Light Gray - #F8F9FB
    Dark Gray  - #444444
    Text Black - #222222
-*/
+===================================== */
 
+/* 1. Common Styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,223 +18,452 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fb;
-    color: #222;
-
+    font-family: Arial, sans-serif;
+    background-color: #F8F9FB;
+    color: #222222;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-header.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 80px;
-    padding: 15px 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.logo-image {
-    width: 150px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    max-height: 48px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #444;
-    margin: 0 14px;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #c49a45;
-}
-
-button {
-    padding: 11px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.login {
-    background-color: white;
-    color: #14213d;
-    border: 1px solid #14213d;
-}
-
-.register {
-    background-color: #14213d;
-    color: white;
-    border: 1px solid #14213d;
-    margin-left: 8px;
-}
-
-.login:hover {
-    background-color: #f0f2f5;
-}
-
-.register:hover {
-    background-color: #c49a45;
-    border-color: #c49a45;
-    color: #14213d;
 }
 
 main {
     flex: 1;
 }
 
-.page-content {
-    padding: 120px 5% 40px;
-    color: #222222;
+a {
+    transition: 0.3s;
 }
 
-.page-content h1 {
-    margin-bottom: 20px;
+h1, h2, h3 {
     color: #14213D;
 }
 
-.page-content p {
-    font-size: 16px;
-    line-height: 1.6;
+p {
+    line-height: 1.7;
 }
 
-footer {
-    background-color: #14213d;
-    color: #ddd;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: auto;
-    font-size: 14px;
+
+/* 2. Navigation Bar */
+header.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    min-height: 85px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 0;
-    }
-
-    .nav-actions {
-        display: flex;
-        gap: 8px;
-    }
-
-    .register {
-        margin-left: 0;
-    }
+.brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-/* about section s1*/
+.brand a {
+    display: block;
+}
 
-.about-section {
+.logo-image {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+/* Navigation Links */
+header.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+header.navbar nav a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+header.navbar nav a:hover {
+    color: #C49A45;
+}
+
+/* Login and Register Links */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.nav-actions a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+}
+
+.nav-actions .login {
+    background-color: #FFFFFF;
+    color: #14213D;
+    border: 1px solid #14213D;
+}
+
+.nav-actions .register {
+    background-color: #14213D;
+    color: #FFFFFF;
+    border: 1px solid #14213D;
+}
+
+.nav-actions .login:hover {
+    background-color: #F8F9FB;
+}
+
+.nav-actions .register:hover {
+    background-color: #C49A45;
+    color: #14213D;
+}
+
+
+/* 3. Footer */
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 25px 15px;
     background-color: #14213D;
     color: #FFFFFF;
     text-align: center;
-    padding: 50px 70px;
-    border: none;
-    border-radius: 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* =====================================
+   HOME PAGE
+===================================== */
+
+/* Hero Section */
+.home-hero {
+    margin-top: 85px;
+    padding: 85px 8%;
+    background-color: #14213D;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    color: #C49A45;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.shop-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #C49A45;
+    color: #14213D;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.shop-btn:hover {
+    background-color: #FFFFFF;
+}
+
+
+/* Featured Watches */
+.featured-watches {
+    padding: 55px 6%;
+    background-color: #F8F9FB;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    color: #C49A45;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #14213D;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #444444;
+    font-size: 15px;
+}
+
+.watch-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.watch-card {
+    flex: 1 1 240px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s;
+}
+
+.watch-card:hover {
+    transform: translateY(-5px);
+}
+
+.watch-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.watch-card h3 {
+    color: #14213D;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.watch-description {
+    color: #444444;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.watch-price {
+    color: #C49A45;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.watch-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #C49A45;
+    color: #14213D;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.watch-btn:hover {
+    background-color: #14213D;
+    color: #FFFFFF;
+}
+
+
+/* Why Choose WatchX */
+.why-choose {
+    padding: 55px 6%;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.why-choose .feature-card {
+    flex: 1 1 200px;
+    max-width: 250px;
+    padding: 25px 15px;
+    background-color: #F8F9FB;
+    border-bottom: 3px solid #C49A45;
+    border-radius: 5px;
+}
+
+.feature-icon {
+    color: #C49A45;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.why-choose .feature-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.why-choose .feature-card p {
+    color: #444444;
+    font-size: 14px;
+}
+
+
+/* Final Offer Section */
+.home-offer {
+    padding: 55px 8%;
+    background-color: #14213D;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.offer-subtitle {
+    color: #C49A45;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.home-offer h2 {
+    color: #FFFFFF;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.home-offer > p:not(.offer-subtitle) {
+    max-width: 650px;
+    margin: 0 auto 22px;
+    color: #FFFFFF;
+}
+
+.offer-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #C49A45;
+    color: #14213D;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.offer-btn:hover {
+    background-color: #FFFFFF;
+}
+
+
+/* =====================================
+   ABOUT US PAGE
+===================================== */
+
+/* About Section 1 */
+.about-section {
+    margin-top: 105px;
+    padding: 50px 8%;
+    background-color: #14213D;
+    color: #FFFFFF;
+    text-align: center;
 }
 
 .subtitle {
     color: #C49A45;
     font-size: 12px;
-    margin-bottom: 10px;
     letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .about-section h1 {
+    color: #FFFFFF;
     font-size: 32px;
     margin-bottom: 12px;
 }
 
 .description {
-    font-size: 14px;
-    line-height: 1.6;
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 .about-btn {
     display: inline-block;
+    padding: 10px 20px;
     background-color: #C49A45;
     color: #14213D;
     text-decoration: none;
-    padding: 10px 20px;
     border-radius: 4px;
-    font-size: 16px;
 }
 
 .about-btn:hover {
     background-color: #FFFFFF;
 }
 
-/*s2*/
 
+/* About Section 2: Our Story */
 .our-story {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     padding: 50px 8%;
-    margin-top: 20px;
 }
 
-
-.story-image {
-    width: 50%;
+.story-image,
+.story-content {
+    flex: 1;
+    min-width: 0;
 }
 
 .story-image img {
+    display: block;
     width: 100%;
-    height: 250px;
+    height: 280px;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.story-content {
-    width: 50%;
-}
-
 .story-content .story-subtitle {
     color: #C49A45;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .story-content h2 {
     color: #14213D;
     font-size: 28px;
@@ -240,48 +473,15 @@ footer {
 .story-content p {
     color: #444444;
     font-size: 14px;
-    line-height: 1.7;
     margin-bottom: 12px;
 }
 
-@media (max-width: 768px) {
-    .our-story {
-        flex-direction: column;
-        padding: 35px 20px;
-        gap: 25px;
-    }
 
-    .story-image,
-    .story-content {
-        width: 100%;
-    }
-
-    .story-image img {
-        height: 250px;
-    }
-}
-
-/* s3 */
-
+/* About Section 3: Mission and Vision */
 .mission-vision {
     padding: 50px 8%;
-    margin-top: 20px;
-    border: none;
-    border-radius: 20px;
     background-color: #FFFFFF;
     text-align: center;
-}
-
-.section-heading h2 {
-    color: #14213D;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.section-heading p {
-    color: #444444;
-    font-size: 14px;
-    margin-bottom: 30px;
 }
 
 .mission-container {
@@ -290,10 +490,10 @@ footer {
 }
 
 .mission-card {
+    flex: 1;
     padding: 25px;
     background-color: #F8F9FB;
     border: 1px solid #E5E5E5;
-    border-radius: 5px;
     text-align: left;
 }
 
@@ -306,20 +506,13 @@ footer {
 .mission-card p {
     color: #444444;
     font-size: 14px;
-    line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-    .mission-container {
-        flex-direction: column;
-    }
-}
 
-/* s4 */
+/* About Section 4: Why WatchX */
 .why-watchx {
-    background-color: #F8F9FB;
     padding: 50px 8%;
-    margin-top: 20px;
+    background-color: #F8F9FB;
     text-align: center;
 }
 
@@ -337,48 +530,43 @@ footer {
 
 .features {
     display: flex;
+    justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.feature-card {
-    background-color: #FFFFFF;
+.features .feature-card {
+    flex: 1 1 200px;
     padding: 25px 15px;
+    background-color: #FFFFFF;
     border: 1px solid #E5E5E5;
+    border-bottom: 3px solid #C49A45;
     border-radius: 5px;
 }
 
-.feature-card h3 {
+.features .feature-card h3 {
     color: #C49A45;
     font-size: 18px;
     margin-bottom: 12px;
 }
 
-.feature-card p {
+.features .feature-card p {
     color: #444444;
     font-size: 14px;
-    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column;
-    }
-}
 
-.about-section h1,
-.contact-hero h1 {
-    color: white;
-}
+/* =====================================
+   CONTACT PAGE
+===================================== */
 
-/* contact page s1 */
-
+/* Contact Section 1 */
 .contact-hero {
+    margin-top: 105px;
+    padding: 45px 20px;
     background-color: #14213D;
     color: #FFFFFF;
-    border: none;
-    border-radius: 20px;
     text-align: center;
-    padding: 45px 20px;
 }
 
 .contact-subtitle {
@@ -389,21 +577,23 @@ footer {
 }
 
 .contact-hero h1 {
+    color: #FFFFFF;
     font-size: 32px;
     margin-bottom: 12px;
 }
 
 .contact-description {
+    color: #FFFFFF;
     font-size: 14px;
-    line-height: 1.6;
 }
 
-/* s2 */
+
+/* Contact Section 2: Form */
 .contact-form-section {
-    background-color: #FFFFFF;
     padding: 40px 8%;
-    margin: 20px 5%;
-    border-radius: 10px;
+    margin: 25px 5%;
+    background-color: #FFFFFF;
+    border-radius: 8px;
 }
 
 .form-heading {
@@ -452,11 +642,12 @@ footer {
 }
 
 .send-btn {
+    padding: 12px 22px;
     background-color: #C49A45;
     color: #14213D;
     border: none;
-    padding: 12px 22px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .send-btn:hover {
@@ -464,11 +655,12 @@ footer {
     color: #FFFFFF;
 }
 
-/* s3 */
+
+/* Contact Section 3: Contact Information */
 .contact-info {
-    background-color: #F8F9FB;
     padding: 40px 8%;
     margin: 20px 5%;
+    background-color: #F8F9FB;
     text-align: center;
 }
 
@@ -491,8 +683,8 @@ footer {
 
 .info-card {
     flex: 1;
-    background-color: #FFFFFF;
     padding: 25px 15px;
+    background-color: #FFFFFF;
     border: 1px solid #E5E5E5;
     border-radius: 5px;
 }
@@ -506,11 +698,372 @@ footer {
 .info-card p {
     color: #444444;
     font-size: 14px;
-    line-height: 1.6;
+}
+
+
+/* =====================================
+   CATEGORY PAGE
+===================================== */
+
+.category-page {
+    padding: 125px 6% 50px;
+    background-color: #F8F9FB;
+}
+
+.category-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.category-heading h1 {
+    color: #14213D;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.category-heading p {
+    color: #444444;
+    font-size: 15px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+    header.navbar {
+        gap: 15px;
+        padding: 12px 3%;
+    }
+
+    .logo-image {
+        width: 170px;
+    }
+
+    header.navbar nav {
+        gap: 12px;
+    }
+
+    header.navbar nav a {
+        font-size: 14px;
+    }
+
+    .nav-actions a {
+        padding: 9px 12px;
+    }
 }
 
 @media (max-width: 768px) {
+    header.navbar {
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .logo-image {
+        width: 200px;
+    }
+
+    header.navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-actions {
+        justify-content: center;
+    }
+
+    .home-hero {
+        margin-top: 0;
+        padding: 60px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .watch-card {
+        flex-basis: 100%;
+        max-width: 350px;
+    }
+
+    .why-choose .feature-card {
+        flex-basis: 100%;
+        max-width: 350px;
+    }
+
+    .our-story {
+        flex-direction: column;
+        padding: 35px 6%;
+        gap: 25px;
+    }
+
+    .story-image,
+    .story-content {
+        width: 100%;
+    }
+
+    .mission-container,
     .info-container {
         flex-direction: column;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .home-offer h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* =====================================
+   WATCHX CATEGORY PAGE
+===================================== */
+
+/* Section 1: Category Hero */
+.category-hero {
+    margin-top: 80px;
+    padding: 70px 20px;
+    background-color: #14213D;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.category-subtitle {
+    color: #C49A45;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.category-hero h1 {
+    color: #FFFFFF;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.category-description {
+    color: #FFFFFF;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Section 2: Product Collection */
+.watch-categories {
+    padding: 55px 6%;
+    background-color: #F8F9FB;
+}
+
+.category-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.product-label {
+    color: #C49A45;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.category-heading h2 {
+    color: #14213D;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.category-heading p {
+    color: #444444;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Product Grid */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual Product Card */
+.product-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(20, 33, 61, 0.12);
+}
+
+/* Product Image */
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: #FFFFFF;
+}
+
+/* Product Information */
+.product-info {
+    padding: 18px;
+}
+
+.product-type {
+    display: inline-block;
+    color: #9A742B;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    color: #14213D;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.product-info p {
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+    margin-bottom: 15px;
+}
+
+/* Product Price */
+.product-price {
+    color: #14213D;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+/* View Details Button */
+.product-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #C49A45;
+    color: #14213D;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.product-btn:hover {
+    background-color: #14213D;
+    color: #FFFFFF;
+}
+
+/* Tablet Screens */
+@media (max-width: 1000px) {
+    .product-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .product-card img {
+        height: 190px;
+    }
+}
+
+/* Small Tablet Screens */
+@media (max-width: 768px) {
+    .category-hero {
+        margin-top: 0;
+        padding: 50px 20px;
+    }
+
+    .category-hero h1 {
+        font-size: 29px;
+    }
+
+    .category-description {
+        font-size: 14px;
+    }
+
+    .watch-categories {
+        padding: 40px 5%;
+    }
+
+    .category-heading h2 {
+        font-size: 25px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .product-card img {
+        height: 170px;
+    }
+
+    .product-info {
+        padding: 13px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-info p {
+        font-size: 13px;
+    }
+
+    .product-price {
+        font-size: 19px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+
+    .category-hero h1 {
+        font-size: 25px;
+    }
+
+    .category-subtitle {
+        font-size: 11px;
     }
 }

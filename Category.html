@@ -1,42 +1,313 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category - WatchX</title>
+    <title>Watch Categories - WatchX</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <header class="navbar">
         <div class="brand">
-            <img src="images/watchx_logo.png"
-                 alt="WatchX Logo"
-                 class="logo-image">
+            <a href="index.html">
+                <img src="images/watchx_logo.png"
+                     alt="WatchX Logo"
+                     class="logo-image">
+            </a>
         </div>
 
         <nav>
             <a href="index.html">Home</a>
             <a href="About.html">About Us</a>
-            <a href="Category.html">Category</a>
+            <a href="Category.html" class="active">Category</a>
             <a href="Contact.html">Contact Us</a>
         </nav>
 
-        <div>
-            <button class="login">Login</button>
-            <button class="register">Register</button>
+        <div class="nav-actions">
+            <a href="login.html" class="login">Login</a>
+            <a href="register.html" class="register">Register</a>
         </div>
     </header>
 
-    <main class="page-content">
-        <h1>Category</h1>
-        <p>Explore our wide range of stylish and modern watches.</p>
+    <!-- Section 1: Category Hero -->
+    <main>
+        <section class="category-hero">
+            <p class="category-subtitle">EXPLORE OUR COLLECTION</p>
+            <h1>Find Your Perfect Watch</h1>
+            <p class="category-description">
+                Discover stylish, classic, and modern watches
+                designed for every occasion. Explore our collection
+                and find the perfect watch to match your style.
+            </p>
+        </section>
+
+        <!-- Section 2: Product Collection -->
+        <section class="watch-categories">
+
+            <div class="category-heading">
+                <p class="product-label">OUR WATCH COLLECTION</p>
+                <h2>Explore Our Products</h2>
+                <p>
+                    From everyday essentials to elegant timepieces,
+                    find a watch that suits your style.
+                </p>
+            </div>
+
+            <div class="product-container">
+
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/watch21.jpg" alt="Classic Black Watch">
+                    <div class="product-info">
+                        <span class="product-type">CLASSIC</span>
+                        <h3>Classic Black Watch</h3>
+                        <p>A timeless black watch for everyday style.</p>
+                        <div class="product-price">₹1,499</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/watch22.jpg" alt="Golden Elegance Watch">
+                    <div class="product-info">
+                        <span class="product-type">LUXURY</span>
+                        <h3>Golden Elegance</h3>
+                        <p>A golden finish for a polished appearance.</p>
+                        <div class="product-price">₹2,499</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/watch23.jpg" alt="Silver Steel Watch">
+                    <div class="product-info">
+                        <span class="product-type">FORMAL</span>
+                        <h3>Silver Steel Watch</h3>
+                        <p>A smart silver design for formal occasions.</p>
+                        <div class="product-price">₹1,999</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/watch4.jpg" alt="Sporty Blue Watch">
+                    <div class="product-info">
+                        <span class="product-type">SPORTS</span>
+                        <h3>Sporty Blue</h3>
+                        <p>A bold blue watch for an active lifestyle.</p>
+                        <div class="product-price">₹1,799</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="images/watch5.jpg" alt="Minimal White Watch">
+                    <div class="product-info">
+                        <span class="product-type">MINIMAL</span>
+                        <h3>Minimal White</h3>
+                        <p>A clean, simple design that goes with anything.</p>
+                        <div class="product-price">₹1,299</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="images/watch6.jpg" alt="Brown Leather Watch">
+                    <div class="product-info">
+                        <span class="product-type">LEATHER</span>
+                        <h3>Brown Leather</h3>
+                        <p>A classic leather-look strap with a warm finish.</p>
+                        <div class="product-price">₹1,699</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="images/watch7.jpg" alt="Midnight Edition Watch">
+                    <div class="product-info">
+                        <span class="product-type">PREMIUM</span>
+                        <h3>Midnight Edition</h3>
+                        <p>A sleek dark design for a modern look.</p>
+                        <div class="product-price">₹2,799</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="images/watch8.jpg" alt="Rose Gold Watch">
+                    <div class="product-info">
+                        <span class="product-type">FASHION</span>
+                        <h3>Rose Gold Watch</h3>
+                        <p>A fashionable rose-gold finish for special days.</p>
+                        <div class="product-price">₹2,299</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="images/watch9.jpg" alt="Urban Chronograph Watch">
+                    <div class="product-info">
+                        <span class="product-type">CHRONOGRAPH</span>
+                        <h3>Urban Chronograph</h3>
+                        <p>A sporty-inspired design with a bold dial.</p>
+                        <div class="product-price">₹3,499</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <img src="images/watch10.jpg" alt="Everyday Essential Watch">
+                    <div class="product-info">
+                        <span class="product-type">EVERYDAY</span>
+                        <h3>Everyday Essential</h3>
+                        <p>A versatile watch for your daily routine.</p>
+                        <div class="product-price">₹999</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <img src="images/watch11.jpg" alt="Executive Silver Watch">
+                    <div class="product-info">
+                        <span class="product-type">EXECUTIVE</span>
+                        <h3>Executive Silver</h3>
+                        <p>A refined style for work and formal events.</p>
+                        <div class="product-price">₹2,699</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <img src="images/watch12.jpg" alt="Adventure Sport Watch">
+                    <div class="product-info">
+                        <span class="product-type">SPORTS</span>
+                        <h3>Adventure Sport</h3>
+                        <p>A rugged-inspired design for casual outings.</p>
+                        <div class="product-price">₹2,199</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card">
+                    <img src="images/watch13.jpg" alt="Elegant Champagne Watch">
+                    <div class="product-info">
+                        <span class="product-type">ELEGANT</span>
+                        <h3>Elegant Champagne</h3>
+                        <p>A soft champagne tone for a sophisticated look.</p>
+                        <div class="product-price">₹2,399</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card">
+                    <img src="images/watch14.jpg" alt="Navy Dial Watch">
+                    <div class="product-info">
+                        <span class="product-type">MODERN</span>
+                        <h3>Navy Dial Watch</h3>
+                        <p>A deep navy dial with a clean, modern design.</p>
+                        <div class="product-price">₹1,899</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card">
+                    <img src="images/watch15.jpg" alt="Luxury Gold Watch">
+                    <div class="product-info">
+                        <span class="product-type">LUXURY</span>
+                        <h3>Luxury Gold</h3>
+                        <p>A statement design for your special occasions.</p>
+                        <div class="product-price">₹3,299</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card">
+                    <img src="images/watch16.jpg" alt="Casual Everyday Watch">
+                    <div class="product-info">
+                        <span class="product-type">CASUAL</span>
+                        <h3>Casual Everyday</h3>
+                        <p>A comfortable-looking style for relaxed days.</p>
+                        <div class="product-price">₹1,199</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card">
+                    <img src="images/watch17.jpg" alt="Black Steel Premium Watch">
+                    <div class="product-info">
+                        <span class="product-type">PREMIUM</span>
+                        <h3>Black Steel Premium</h3>
+                        <p>A bold steel-look design with dark details.</p>
+                        <div class="product-price">₹2,899</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card">
+                    <img src="images/watch18.jpg" alt="Vintage Brown Watch">
+                    <div class="product-info">
+                        <span class="product-type">VINTAGE</span>
+                        <h3>Vintage Brown</h3>
+                        <p>A traditional look inspired by classic timepieces.</p>
+                        <div class="product-price">₹1,899</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card">
+                    <img src="images/watch19.jpg" alt="Modern Mesh Watch">
+                    <div class="product-info">
+                        <span class="product-type">MODERN</span>
+                        <h3>Modern Mesh</h3>
+                        <p>A contemporary style with a mesh-look strap.</p>
+                        <div class="product-price">₹2,599</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card">
+                    <img src="images/watch20.jpg" alt="Signature Gold Edition Watch">
+                    <div class="product-info">
+                        <span class="product-type">SIGNATURE</span>
+                        <h3>Signature Gold Edition</h3>
+                        <p>A distinctive gold-toned design for your collection.</p>
+                        <div class="product-price">₹3,799</div>
+                        <a href="Contact.html" class="product-btn">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="site-footer">
         <p>&copy; 2026 WatchX. All rights reserved.</p>
+        <p>Style your time with WatchX.</p>
     </footer>
 
 </body>
 </html>
+```
